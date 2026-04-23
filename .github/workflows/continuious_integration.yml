@@ -16,5 +16,5 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm i
+      - run: make install-backend
       - run: make backend-eslint

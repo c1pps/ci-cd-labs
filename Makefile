@@ -50,9 +50,14 @@ compress:
 	@cd $(BACKUP_DIR)/$(shell date +%Y-%m-%d_%H-%M-%S) && \
 	gzip $(DB_NAME).sql
 
+install-backend:
+	cd backend && npm install
 
 backend-eslint:
 	cd backend && npm run lint
+
+install-frontend:
+	cd frontend && npm install
 
 frontend-eslint:
 	cd frontend && npm run lint
