@@ -30,6 +30,7 @@ jobs:
           node-version: 20
           cache: npm
 
+      - run: make install-backend
       - run: make backend-test
 
   quality-frontend:
