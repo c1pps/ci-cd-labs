@@ -61,3 +61,6 @@ install-frontend:
 
 frontend-eslint:
 	cd frontend && npm run lint
+
+backend-test:
+	cd backend && npm test
