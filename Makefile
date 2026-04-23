@@ -64,3 +64,6 @@ frontend-eslint:
 
 backend-test:
 	cd backend && npm test
+
+frontend-test:
+	cd frontend && npm test
