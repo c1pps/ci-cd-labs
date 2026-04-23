@@ -10,16 +10,16 @@ export default function App() {
   const [isConnected, setIsConnected] = useState(false);
   const [socket, setSocket] = useState(null);
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
   const [showSignup, setShowSignup] = useState(false);
 
   useEffect(() => {
     // Vérifier si l'utilisateur est déjà connecté
-    const savedToken = localStorage.getItem('token');
+    // const savedToken = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
 
-    if (savedToken && savedUser) {
-      setToken(savedToken);
+    if (savedUser) {
+      // setToken(savedToken);
       setUser(JSON.parse(savedUser));
     }
   }, []);
@@ -83,15 +83,15 @@ export default function App() {
     }
   };
 
-  const handleLoginSuccess = (userData, userToken) => {
+  const handleLoginSuccess = (userData) => {
     setUser(userData);
-    setToken(userToken);
+    // setToken(userToken);
     setShowSignup(false);
   };
 
-  const handleSignupSuccess = (userData, userToken) => {
+  const handleSignupSuccess = (userData) => {
     setUser(userData);
-    setToken(userToken);
+    // setToken(userToken);
     setShowSignup(false);
   };
 
@@ -99,7 +99,7 @@ export default function App() {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
     setUser(null);
-    setToken(null);
+    // setToken(null);
     setPosts([]);
     if (socket) {
       socket.close();

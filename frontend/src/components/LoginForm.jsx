@@ -41,7 +41,7 @@ export default function LoginForm({ onLoginSuccess, onSwitchToSignup }) {
       localStorage.setItem('user', JSON.stringify(data.user));
 
       // Appeler le callback de succès
-      onLoginSuccess(data.user, data.token);
+      onLoginSuccess(data.user);
     } catch (err) {
       setError(err.message);
     } finally {
