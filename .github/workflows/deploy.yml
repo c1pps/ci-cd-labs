@@ -59,21 +59,21 @@ jobs:
             cd /opt/app
 
             cat > .env <<EOF
-            NODE_ENV=${NODE_ENV}
-            PORT=${PORT}
+NODE_ENV=${NODE_ENV}
+PORT=${PORT}
 
-            DB_HOST=${DB_HOST}
-            DB_USER=${DB_USER}
-            DB_PASSWORD=${DB_PASSWORD}
-            DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
-            DB_NAME=${DB_NAME}
-            DB_PORT=${DB_PORT}
+DB_HOST=${DB_HOST}
+DB_USER=${DB_USER}
+DB_PASSWORD=${DB_PASSWORD}
+DB_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+DB_NAME=${DB_NAME}
+DB_PORT=${DB_PORT}
 
-            JWT_SECRET=${JWT_SECRET}
-            JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
+JWT_SECRET=${JWT_SECRET}
+JWT_EXPIRES_IN=${JWT_EXPIRES_IN}
 
-            VITE_API_URL=${VITE_API_URL}
-            EOF
+VITE_API_URL=${VITE_API_URL}
+EOF
 
             echo "${DOCKERHUB_TOKEN}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
 
