@@ -17,6 +17,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug SSH key
+        run: |
+          echo "${{ secrets.VPS_SSH_KEY }}" > key.pem
+          wc -l key.pem
+          head -n 1 key.pem
+          tail -n 1 key.pem
+
       - name: Prepare VPS folder
         uses: appleboy/ssh-action@v1.0.3
         with:
