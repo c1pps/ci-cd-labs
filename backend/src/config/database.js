@@ -3,8 +3,8 @@ const mysql = require("mysql2/promise");
 // Configuration de la connexion MySQL
 const dbConfig = {
   host: process.env.DB_HOST || "mysql",
-  user: process.env.DB_USER || "db_user",
-  password: process.env.DB_PASSWORD || "db_password",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "root",
   database: process.env.DB_NAME || "social_media_db",
   port: process.env.DB_PORT || 3306,
   waitForConnections: true,
