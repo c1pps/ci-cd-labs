@@ -37,7 +37,7 @@ services:
       - mysql
 
   backend:
-    image: DOCKERHUB_USERNAME/backend:latest
+    image: c1pps/ci-cd-labs:backend-latest
     container_name: express-backend
     restart: always
     ports:
@@ -61,7 +61,7 @@ services:
     command: npm run start
 
   frontend:
-    image: DOCKERHUB_USERNAME/frontend:latest
+    image: c1pps/ci-cd-labs:frontend-latest
     container_name: react-frontend
     restart: always
     ports:
